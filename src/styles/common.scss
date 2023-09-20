@@ -1,3 +1,156 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-  background: aqua;
+    font-family: 'Inter', Arial, sans-serif;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+.h1 {
+    @include fluid-font-size(16px, 26px);
+    line-height: 120%;
+}
+
+h2,
+.h2 {
+    @include fluid-font-size(16px, 20px);
+    line-height: 110%;
+}
+
+h4,
+.h4 {
+    @include fluid-font-size(14px, 16px);
+    line-height: normal;
+}
+
+.max-width,
+.container {
+    max-width: $maxWidth;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @media (max-width: $s480) {
+        padding: 0 8px;
+    }
+}
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.40);
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 100%;
+    padding: .5rem;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+    transition: .4s opacity;
+}
+
+[data-popup] {
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.icon img,
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.btn {
+    border-radius: 8px;
+    background: $blueDark;
+    padding: 11px 26px;
+    color: $white;
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+.btn--with-burger>span {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 19px;
+
+    & span {
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+        border-radius: 4px;
+    }
+}
+
+.btn--with-burger {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.nav {
+    gap: 24px;
+    display: flex;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav--columns {
+    gap: 11px;
+    flex-direction: column;
+}
+
+.nav--item-head {
+    margin-bottom: 11px;
+    color: $dark;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+@media (min-width:$s970) {
+    .mobile_viewed {
+        display: none !important;
+    }
+}
+
+@media (max-width:$s970) {
+    .desk_viewed {
+        display: none !important;
+    }
 }

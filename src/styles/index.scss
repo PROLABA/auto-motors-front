@@ -1,8 +1,15 @@
-@import './fonts.scss';
-@import './common.scss';
+//settings
+@import '../css/swiper-bundle.min.css';
+@import '../css/reset.css';
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'NeueMachina', NeueMachina, Arial, Helvetica, sans-serif;
-}
+@import './normalize.scss';
+@import './fonts.scss';
+@import './vars.scss';
+@import './fluid-font-size.scss';
+@import './common.scss';
+@import './ui-text.scss';
+// @import './owl.min.scss';
+// main + layout
+
+@import './main/header.scss';
+@import './main/footer.scss';

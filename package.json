@@ -2,7 +2,7 @@
   "browserslist": "> 0.25%",
   "scripts": {
     "dev": "parcel ./src/*.pug --port 3000 --open",
-    "build": "rm -rf ./dist && parcel build ./src/*.pug --public-url .",
+    "build": "parcel build ./src/*.pug --public-url .",
     "local": "yarn && yarn dev",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|ts|tsx|css|scss)\"",
     "format": "yarn prettier --write",
@@ -12,12 +12,15 @@
     "@babel/core": "^7.12.0",
     "@parcel/transformer-pug": "2.3.2",
     "@parcel/transformer-sass": "2.3.2",
-    "parcel": "^2.3.2",
-    "prettier": "^2.7.1"
+    "parcel": "2.3.2",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10"
   },
   "dependencies": {
-    "@parcel/config-default": "^2.3.2",
-    "@parcel/core": "^2.3.2",
+    "@dogstudio/highway": "^2.2.1",
+    "@parcel/config-default": "2.3.2",
+    "@parcel/core": "2.3.2",
+    "gsap": "^3.11.3",
     "parcel-namer-ows": "^0.1.4"
   }
 }

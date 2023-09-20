@@ -1,0 +1,73 @@
+mixin header(className)
+  header(class=`${className ? className : ''} header`)
+    .container 
+      header.header__head.desk_viewed
+        .header__location
+          figure.icon 
+            img(src="./images/location.png", alt="Локация")
+          span Набережные Челны
+        .header__menu 
+          nav.nav 
+            a.nav__item(href="#") Бренды
+            a.nav__item(href="#") Акции
+            a.nav__item(href="#") Услуги
+            a.nav__item(href="#") Компания
+            a.nav__item(href="#") Блог
+            a.nav__item(href="#") Информация
+            a.nav__item(href="#") Контакты
+        a.header__tel(href="tel:+71000000000") 
+          span +7 100 000-00-00
+          span.header__tel-text Заказать звонок
+      .header__content
+
+        .header__logo 
+          figure.logo.image 
+            img(src="./images/logo.png", alt="Автомоторс")
+        .header__catalogo-btn.btn.btn--with-burger.desk_viewed 
+          span 
+            span 
+            span 
+            span
+          | Каталог
+        .header__search 
+          input.desk_viewed.search-input(type="text" name='search' placeholder='Введите артикул или название')
+          .search-icon.image 
+            img.desk_viewed(src="./images/search.png", alt="Поиск")
+            .mobile_viewed
+              include ../../icons/searchMobile.svg
+        ul.header__personalities.desk_viewed 
+          li.header__personalities-item
+            a.personality(href="#") 
+              figure.personality__icon.icon 
+                img(src="./images/user.png", alt="Личный кабинет")
+              span.personality__text Войти
+          li.header__personalities-item
+            a.personality(href="#") 
+              figure.personality__icon.icon 
+                img(src="./images/star.png", alt="Избранное")
+              span.personality__text Избранное
+          li.header__personalities-item
+            a.personality(href="#") 
+              figure.personality__icon.icon 
+                img(src="./images/basket.png", alt="Корзина")
+                span.personality__basket-count 1
+              span.personality__text Корзина
+        .header__burger.mobile_viewed.btn--with-burger 
+          span
+            span 
+            span 
+            span
+      footer.header__foot.desk_viewed
+        nav.nav 
+          a.nav__item(href="#") 
+            figure.icon.nav__item-icon 
+              img(src="./images/new.png", alt="")
+            | Новинки
+          a.nav__item(href="#") 
+            figure.icon.nav__item-icon 
+              img(src="./images/sale.png", alt="")
+            | Распродажа
+          a.nav__item(href="#") Все бренды
+          a.nav__item(href="#") Запчасти для а/м КАМАЗ
+          a.nav__item(href="#") Собственное производство
+          a.nav__item(href="#") Дилерские  сертификаты

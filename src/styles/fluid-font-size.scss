@@ -1,0 +1,21 @@
+@use 'sass:math';
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-font-size($fs1, $fs2) {
+  $w1: 540px;
+  $w2: 1500px;
+  & {
+    font-size: $fs1;
+    @media screen and (min-width: $w1) {
+      font-size: calc(
+        #{$fs1} + #{strip-unit($fs2 - $fs1)} *
+          ((100vw - #{$w1}) / #{strip-unit($w2 - $w1)})
+      );
+    }
+    @media screen and (min-width: $w2) {
+      font-size: $fs2;
+    }
+  }
+}

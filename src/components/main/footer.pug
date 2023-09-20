@@ -1,0 +1,46 @@
+mixin footer(className)
+  footer(class=`${className ? className : ''} footer`)
+    .footer-main 
+      .container 
+        .footer__logo 
+          figure.logo.image 
+            img(src="./images/logo.png", alt="Автомоторс")
+        .footer__content 
+          .footer__navigation 
+            nav.nav.nav--columns 
+              span.nav__item.nav--item-head Интернет-магазин
+              a.nav__item(href="") Каталог
+              a.nav__item(href="") Акции
+              a.nav__item(href="") Бренды
+              a.nav__item(href="") Услуги
+            nav.nav.nav--columns 
+              span.nav__item.nav--item-head Компания
+              a.nav__item(href="") О компании
+              a.nav__item(href="") Акции
+              a.nav__item(href="") Лицензии
+              a.nav__item(href="") Документы
+            nav.nav.nav--columns 
+              span.nav__item.nav--item-head Информация
+              a.nav__item(href="") Реквизиты
+              a.nav__item(href="") Магазины
+              a.nav__item(href="") Возможности
+            nav.nav.nav--columns 
+              span.nav__item.nav--item-head Помощь
+              a.nav__item(href="") Условия оплаты
+              a.nav__item(href="") Условия доставки
+              a.nav__item(href="") Гарантия на товар
+              a.nav__item(href="") Вопрос-ответ
+              a.nav__item(href="") Обзоры
+          .footer__contacts.desk_viewed   
+            .footer__contacts-title.nav--item-head Контакты
+            .footer__contacts-list 
+              a.footer__contacts-item(href="tel:+71000000000") +7 100 000-00-00
+              a.footer__contacts-item(href="mailto:chel.no-reply@aspro-demo.ru") chel.no-reply@aspro-demo.ru
+              a.footer__contacts-item(href="#") Челябинск, ул. Лермонтова 21, 3 этаж, офис 4
+    footer.footer__foot 
+      .container
+        .footer__copyright © 2023 Автомоторс
+        a.footer__dev
+          | Дизайн и разработка
+          figure.icon 
+            include ../../icons/logoLaba.svg
