@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+.scrollbar--blue {
+    scrollbar-width: thin;
+    /* "auto" или "thin"  */
+    scrollbar-color: #3251A3 #F8F8F8;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #F8F8F8;
+        border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #3251A3;
+        border-radius: 50px;
+    }
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
     color: $dark;
@@ -28,6 +48,7 @@ h2,
 .h2 {
     @include fluid-font-size(16px, 20px);
     line-height: 110%;
+    font-weight: 500
 }
 
 h4,
@@ -90,33 +111,51 @@ h4,
 
 .btn {
     border-radius: 8px;
-    background: $blueDark;
+    background: $blueLight;
     padding: 11px 26px;
     color: $white;
     font-size: 16px;
     line-height: 150%;
     cursor: pointer;
-}
+    border: none;
+    font-family: inherit;
 
-.btn--with-burger>span {
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 19px;
-
-    & span {
-        width: 100%;
-        height: 1px;
-        background-color: $white;
-        border-radius: 4px;
+    &--darkest {
+        background-color: $blueDark;
     }
-}
 
-.btn--with-burger {
-    display: flex;
-    gap: 9px;
-    align-items: center;
+    &--blue-light {
+        border-radius: 8px;
+        border: 1px solid #FFF;
+        background: #F5F7FA;
+        color: #3251A3;
+    }
+
+    &--with-burger {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+
+        &>span {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 19px;
+
+            & span {
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &--white {
+        background: #fff;
+        color: #3251A3;
+    }
 }
 
 .nav {
@@ -141,6 +180,30 @@ h4,
     font-size: 16px;
     font-weight: 700;
     line-height: 125%;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: .4;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+.clr--red {
+    color: #f00;
+}
+
+.object-fit {
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (min-width:$s970) {

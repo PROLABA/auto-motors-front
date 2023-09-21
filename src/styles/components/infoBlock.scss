@@ -1,0 +1,57 @@
+.info {
+  margin-bottom: 70px;
+}
+
+.info-wrp {
+  display: flex;
+  gap: 20px;
+}
+
+.info__block {
+  border-radius: 10px;
+  background: #F5F7FA;
+  padding: 31px 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 244px;
+  width: calc(33% - 12.5px);
+}
+
+.info__block-title {
+  margin-bottom: 16px;
+}
+
+.info__block-desc {
+  font-size: 16px;
+  line-height: 140%;
+  max-width: 390px;
+}
+
+.info__block-btn {
+  margin-top: auto;
+}
+
+.info__block--with-car {
+  background: linear-gradient(90deg, #F5F7FA 0.17%, #DEEBFF 99.92%);
+}
+
+.info__block:last-child {
+  flex-grow: 1;
+}
+
+.info__block-image {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.info__block-image img {
+  height: 100%;
+}
+
+.info__block:last-child .info__block-desc {
+  max-width: 550px;
+}

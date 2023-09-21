@@ -1,0 +1,34 @@
+.clients__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.clients__more {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #3251A3;
+  font-size: 16px;
+  line-height: 14px;
+}
+
+.clients__list {
+  display: flex;
+  gap: 20px;
+}
+
+.client {
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  padding: 17px 33px;
+  width: calc((100% - 100px) / 6);
+}
+
+.client img {
+  height: 46px;
+}
+
+.clients {
+  margin-bottom: 84px;
+}

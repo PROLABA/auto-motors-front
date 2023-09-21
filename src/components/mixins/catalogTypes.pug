@@ -1,0 +1,26 @@
+mixin catalogTypes()
+  section.types
+    .container 
+      h2.types__title Виды продукции
+      ul.types__filter 
+        li.types__filter-item.filter-selected А
+        li.types__filter-item Б
+        li.types__filter-item В
+        li.types__filter-item Г
+        li.types__filter-item Д
+        li.types__filter-item Е
+        li.types__filter-item Ж
+      ul.types__items.scrollbar--blue 
+        - for (let i=0;i<10;i++)
+          li.types__item
+            .types__word А
+            ul.types__type-list 
+              li.types__type Автокамеры
+              li.types__type Автопаласы
+              li.types__type Авточехлы
+              li.types__type Адаптер
+              li.types__type Аккумуляторы
+              li.types__type Амортизаторы
+              li.types__type Амперметр
+              li.types__more Показать все
+            

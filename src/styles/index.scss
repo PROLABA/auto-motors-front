@@ -6,10 +6,19 @@
 @import './fonts.scss';
 @import './vars.scss';
 @import './fluid-font-size.scss';
-@import './common.scss';
 @import './ui-text.scss';
 // @import './owl.min.scss';
 // main + layout
 
 @import './main/header.scss';
 @import './main/footer.scss';
+
+@import "./components/banners.scss";
+@import "./components/bannerSeparator.scss";
+@import "./components/catalogTypes.scss";
+@import "./components/clients.scss";
+@import "./components/infoBlock.scss";
+@import "./components/mainBanner.scss";
+@import "./components/newItems.scss";
+
+@import './common.scss';

@@ -1,0 +1,152 @@
+.items__head {
+  margin-bottom: 28px;
+}
+
+.items {
+  margin-bottom: 70px;
+}
+
+.items__title {
+  margin-bottom: 16px;
+}
+
+.items__filter {
+  font-size: 14px;
+  display: flex;
+  gap: 12px;
+  line-height: 1;
+}
+
+.items__filter-item {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #F5F7FA;
+  cursor: pointer;
+}
+
+.filter-selected {
+  background: #5263FC;
+  color: #fff;
+}
+
+.items__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: calc((100% - 100px) / 6);
+  margin-top: 10px;
+}
+
+.gallery__pic {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+
+.gallery__pic img {
+  height: 100%;
+}
+
+.card__tags {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  color: #FFF;
+  font-size: 10px;
+  line-height: 1;
+  /* 100% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.card__tag {
+  padding: 6px 7px;
+  border-radius: 6px;
+  background: #A56FFD;
+  box-shadow: 0px 0px 10px 0px rgba(255, 101, 101, 0.25);
+}
+
+.bg--purple {
+  background: #A56FFD;
+}
+
+.bg--peach {
+  background: #FF6565;
+}
+
+.card__content {
+  margin-top: 8px;
+}
+
+.card__price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+
+.card__title {
+  margin-bottom: 6px;
+  color: #3251A3;
+  font-size: 16px;
+  line-height: 125%;
+  /* 125% */
+  text-decoration-line: underline;
+}
+
+.card__articul {
+  color: #999;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.card__desc {
+  margin: 12px 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.card__in-stock {
+  color: #69BE15;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+
+.card__gallery .swiper-pagination-bullet {
+  width: 12px;
+  height: 2px;
+  background: #DEDEDE;
+  opacity: 1;
+}
+
+.card__gallery .swiper-pagination-bullet-active {
+  background: #3251A3;
+}
+
+.card__gallery.swiper-horizontal>.swiper-pagination-bullets {
+  bottom: -2px;
+}
+
+.items__more {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0;
+
+  & .btn {
+    min-width: 188px;
+    padding: 15px;
+  }
+}
