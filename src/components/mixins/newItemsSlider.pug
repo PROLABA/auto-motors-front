@@ -1,0 +1,43 @@
+mixin newItemsSlider()
+  section.items
+    .container 
+      .items-wrp 
+        header.items__head 
+          h2.items__title.sec_title Распродажа
+          .items__filter 
+            .items__filter-item.filter-selected Все
+            .items__filter-item Технотрон
+            .items__filter-item Технотрон
+            .items__filter-item Технотрон
+            .items__filter-item Технотрон
+        .items__slider-wrp
+          .items__slider.basic_slider.swiper
+            ul.items__card-list.swiper-wrapper 
+              - for (let i=0;i < 12;i++)
+                li.card.swiper-slide 
+                  a.card__link(href="")
+                    .card__gallery.swiper 
+                      .card__gallery-pics.swiper-wrapper 
+                        figure.gallery__pic.image.swiper-slide 
+                          img(src="./images/card1.png", alt="")
+                        figure.gallery__pic.image.swiper-slide 
+                          img(src="./images/card2.png", alt="")
+                        figure.gallery__pic.image.swiper-slide 
+                          img(src="./images/card3.png", alt="")
+                      .card__gallery-pagination.swiper-pagination.flat-pag 
+                    .card__tags   
+                      .card__tag.bg--peach Хит
+                      .card__tag.bg--purple Советуем
+                    .card__content 
+                      span.card__price 3 200 ₽
+                      h3.card__title Паневежио Аурида
+                      span.card__articul WR545653-39
+                      .card__desc 
+                        p Компрессор  фывфыыыв ф12 одноцилиндровый (Паневежио-Аурида)
+                      .card__in-stock В наличии
+            .swiper-pagination.items__pagination 
+          .basic_slider__arrows.swiper-arrows.items__arrows 
+            .swiper-button-prev 
+              include ../../icons/arrow-slider.svg
+            .swiper-button-next
+              include ../../icons/arrow-slider.svg

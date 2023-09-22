@@ -1,0 +1,27 @@
+mixin clientsSlider()
+  section.clients 
+    .container 
+      header.clients__head 
+        h2.clients__title.sec_title Мы дилеры более 300 заводов
+        a.clients__more.link_more(href="") 
+          | Показать все
+          figure.icon 
+            include ../../icons/arrow-more.svg
+      .clients__slider-wrp
+        .clients__slider.swiper.basic_slider
+          ul.clients__list.swiper-wrapper
+            - for(let i=0;i<6;i++) 
+              li.client.swiper-slide 
+                a.client__link(href="#") 
+                  figure.image 
+                    img(src="./images/client1.png", alt="Технотрон")
+              li.client.swiper-slide 
+                a.client__link(href="#") 
+                  figure.image 
+                    img(src="./images/client2.png", alt="Технотрон")
+          .swiper-pagination.basic_slider__pagination 
+        .basic_slider__arrows.swiper-arrows.clients__arrows 
+          .swiper-button-prev 
+            include ../../icons/arrow-slider.svg
+          .swiper-button-next
+            include ../../icons/arrow-slider.svg

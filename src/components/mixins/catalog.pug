@@ -1,0 +1,108 @@
+include ./productCard.pug
+
+mixin catalog()
+  section.catalog 
+    .container 
+      .catalog__content 
+        aside.catalog__sidebar 
+          h4.sidebar__title Категории
+          ul.sidebar__categories
+            - for(let i=0;i<3;i++)
+              li.sidebar__category
+                span.sidebar__category-title 
+                  figure.icon 
+                    img(src="./icons/arrow-right.png", alt="")
+                  | Запчасти на КАМАЗ
+                ul.sidebar__category-list 
+                  li.sidebar__category-item.category-active Система отопления
+                  li.sidebar__category-item Тормозная система
+                  li.sidebar__category-item Двигатель
+                  li.sidebar__category-item Система отопления
+                  li.sidebar__category-item Тормозная система
+                  li.sidebar__category-item Двигатель
+          .filter 
+            .filter-block 
+              h4.filter-block__title Тип товара
+              input.filter-block__search(type='text' name='search' placeholder='Поиск...')
+              .filter-block__checkboxes
+                - for (let i=0;i<6;i++) 
+                  label.filter-block__checkbox-item
+                    input(type="checkbox" name='type')
+                    span Дышло
+                  label.filter-block__checkbox-item
+                    input(type="checkbox" name='type')
+                    span Система отопления
+            .filter-block 
+              h4.filter-block__title Производитель
+              input.filter-block__search(type='text' name='search' placeholder='Поиск...')
+              .filter-block__checkboxes
+                - for (let i=0;i<6;i++) 
+                  label.filter-block__checkbox-item
+                    input(type="checkbox" name='manafacturer')
+                    span Паневежио-Аурида
+                  label.filter-block__checkbox-item
+                    input(type="checkbox" name='manafacturer')
+                    span БАТЭ
+            .filter-block 
+              h4.filter-block__title По алфавиту
+              .filter-block__letters
+                - for (let i=0;i<8;i++) 
+                  label.filter-block__letter
+                    input(type="checkbox" name='letter')
+                    span А
+                  label.filter-block__letter
+                    input(type="checkbox" name='letter')
+                    span Б
+        .catalog-items
+          header.catalog__head 
+            .catalog__sort 
+              .catalog__sort-text Сначала дешевые
+              figure.catalog__sort-arrow.icon 
+                include ../../icons/arrow.svg
+            .catalog__pages 
+              .pages__turn
+                figure.pages__prev-icon.icon 
+                  include ../../icons/arrow-more.svg
+                .pages__text Назад
+              .pages__nums
+                .pages__num 1
+                .pages__num 2
+                .pages__num 3
+                .pages__num ...
+                .pages__num 17
+                .pages__num 18
+              .pages__turn
+                .pages__text Вперед
+                figure.pages__next-icon.icon 
+                  include ../../icons/arrow-more.svg
+          .catalog__items
+            - for(let i=0;i<4;i++)
+              +productCard()
+            .catalog__banner-sep 
+              .catalog__banner-content 
+                h3.catalog__banner-title Наши диллерские сертификаты
+                .catalog__banner-desc 
+                  p АВТОМОТОРС является дилером и партнером более 200 заводов-смежников.
+                a.catalog__banner-link(href="#")
+                button.btn.btn--darkest Подробнее 
+              figure.image.object-fit.catalog__banner-pic
+                img(src="./images/banner.png", alt="") 
+            - for(let i=0;i<4;i++)
+              +productCard()
+          footer.catalog__foot 
+            .catalog__pages 
+              .pages__turn
+                figure.pages__prev-icon.icon 
+                  include ../../icons/arrow-more.svg
+                .pages__text Назад
+              .pages__nums
+                .pages__num 1
+                .pages__num 2
+                .pages__num 3
+                .pages__num ...
+                .pages__num 17
+                .pages__num 18
+              .pages__turn
+                .pages__text Вперед
+                figure.pages__next-icon.icon 
+                  include ../../icons/arrow-more.svg
