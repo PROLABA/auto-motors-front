@@ -1,15 +1,16 @@
-mixin newItemsSlider()
-  section.items
+mixin newItemsSlider(secondType = false, title = "Распродажа")
+  section.items(class=secondType ? 'items_second-type' :'items_first-type')
     .container 
       .items-wrp 
         header.items__head 
-          h2.items__title.sec_title Распродажа
-          .items__filter 
-            .items__filter-item.filter-selected Все
-            .items__filter-item Технотрон
-            .items__filter-item Технотрон
-            .items__filter-item Технотрон
-            .items__filter-item Технотрон
+          h2.items__title.sec_title= title
+          - if(!secondType)
+            .items__filter 
+              .items__filter-item.filter-selected Все
+              .items__filter-item Технотрон
+              .items__filter-item Технотрон
+              .items__filter-item Технотрон
+              .items__filter-item Технотрон
         .items__slider-wrp
           .items__slider.basic_slider.swiper
             ul.items__card-list.swiper-wrapper 

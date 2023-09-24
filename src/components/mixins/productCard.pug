@@ -1,5 +1,5 @@
-mixin productCard()
-  a.product
+mixin productCard(secondType = false)
+  a.product(class= secondType ? 'product_second-type' : '')
     .product__gallery.swiper 
         .product__gallery-pics.swiper-wrapper 
           figure.gallery__pic.image.swiper-slide 
@@ -9,10 +9,11 @@ mixin productCard()
           figure.gallery__pic.image.swiper-slide 
             img(src="./images/card3.png", alt="")
         .product__gallery-pagination.swiper-pagination.flat-pag 
-    .product__content 
-      ul.product__tags 
-        li.product__tag.bg--peach Хит
-        li.product__tag.bg--purple Советуем
+    .product__content
+      - if(!secondType) 
+        ul.product__tags 
+          li.product__tag.bg--peach Хит
+          li.product__tag.bg--purple Советуем
       .product__name Обойма передняя дифференциала раздаточной коробки (ПАО)
       ul.product__chars 
         li.product__char
@@ -21,17 +22,19 @@ mixin productCard()
         li.product__char
           span Производитель:
           span ПАО
-        li.product__char
-          span Применяемость:
-          span КАМАЗ 5320,  5410 | МАЗ 5410
-        li.product__char
-          span Аналоги:
-          span ЗИТ - 5 320 руб.  | Россия - 3 000 руб.
+        - if(!secondType)
+            li.product__char
+              span Применяемость:
+              span КАМАЗ 5320,  5410 | МАЗ 5410
+            li.product__char
+              span Аналоги:
+              span ЗИТ - 5 320 руб.  | Россия - 3 000 руб.
     .product__actions
       .product__price-wrp 
         span.product__price 5 200 руб.
         .product__in-stock В наличии
       button.btn В корзину
-    .product__fav 
-      figure.icon 
-        img(src="./images/star.png", alt="")
+    - if(!secondType) 
+      .product__fav 
+        figure.icon 
+          img(src="./images/star.png", alt="")

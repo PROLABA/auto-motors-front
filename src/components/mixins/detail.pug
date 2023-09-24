@@ -1,0 +1,100 @@
+include ./productCard.pug
+include ../mixins/newItemsSlider.pug
+
+
+mixin detail()
+  section.detail-sec 
+    .container 
+      .detail-card
+        .detail__pic-wrp 
+          .detail__thumbs-slider.swiper 
+            .detail__thumbs.swiper-wrapper 
+              .detail__thumb.swiper-slide
+                figure.detail__thumb-pic.image 
+                  img(src="./images/card1.png", alt="")
+              .detail__thumb.swiper-slide
+                figure.detail__thumb-pic.image 
+                  img(src="./images/card2.png", alt="")
+          .detail__pic-slider.swiper 
+            .detail__pics.swiper-wrapper 
+              .detail__pic.swiper-slide 
+                figure.image 
+                  img(src="./images/card1.png", alt="")
+              .detail__pic.swiper-slide 
+                figure.image 
+                  img(src="./images/card2.png", alt="")
+        .detail__chars
+          ul.detail__chars-tags 
+            li.detail__chars-tag.bg--peach Хит 
+            li.detail__chars-tag.bg--purple Советуем 
+          h3.detail__chars-title Характеристики
+          ul.detail__chars-list 
+            -for (let i=0;i<2;i++)
+              li.detail__chars-item
+                span
+                  | Артикул:
+                  span.detail__chars-item-sep 
+                span 5320-5001010
+              li.detail__chars-item
+                span
+                  | Производитель:
+                  span.detail__chars-item-sep 
+                span <a>ПАО</a>
+              li.detail__chars-item
+                span
+                  | Применяемость:
+                  span.detail__chars-item-sep 
+                span КАМАЗ 5320,  5410 | МАЗ 5410
+          a.detail__chars-show(href="#desc") Показать описание
+        .detail__actions
+          .detail__to-basket 
+            span.detail__price 3 200 руб. / шт.
+            .detail__count 
+              .detail__count-minus 
+              .detail__count-num 1
+              .detail__count-plus
+            a.detail__to-basket-button
+              button.btn В корзину
+          .detail__count-info   
+            .count-info__item
+              span Товара в наличии 
+              span.bg--green 2100 
+            .count-info__item
+              span Аналоги от <b>2100 руб.</b>
+              span 2
+      +newItemsSlider(true, 'Наши новинки')
+      .detail__analogs 
+        h2.analog__title Аналоги
+        .analog__list 
+          +productCard(true)
+          +productCard(true)
+      #desc.detail__desc 
+        h2.detail__desc-title Описание
+        .detail__desc-text 
+          p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. sdТекст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. asdТекст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом. asdasdasd vТекст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, но является случайным набором слов или сгенерирован иным образом.
+      .detail__detail-chars
+        h2.detail__detail-chars-title Характеристики
+        ul.detail__detail-chars-list
+          -for (let i=0;i<4;i++)
+            li.detail__chars-item
+              span
+                | Артикул:
+                span.detail__chars-item-sep 
+              span 5320-5001010
+            li.detail__chars-item
+              span
+                | Производитель:
+                span.detail__chars-item-sep 
+              span <a>ПАО</a>
+            li.detail__chars-item
+              span
+                | Применяемость:
+                span.detail__chars-item-sep 
+              span КАМАЗ 5320,  5410 | МАЗ 5410
+      .detail__apply
+        h2.detail__apply Применяемость
+        ul.detail__apply-list 
+          li.detail__apply-item
+            a(href="") КАМАЗ 5320 -  Система отопления - Радиатора отопителя
+          li.detail__apply-item
+            a(href="") ККАМАЗ 5410 -  Система отопления - Радиатор отопителя
