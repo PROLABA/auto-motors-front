@@ -20,10 +20,10 @@ mixin header(className)
           span.header__tel-text Заказать звонок
       .header__content
 
-        .header__logo 
+        a.header__logo(href='/') 
           figure.logo.image 
             img(src="./images/logo.png", alt="Автомоторс")
-        .header__catalogo-btn.btn.btn--with-burger.btn--darkest.desk_viewed 
+        a.header__catalogo-btn.btn.btn--with-burger.btn--darkest.desk_viewed( href="./catalog.pug") 
           span 
             span 
             span 

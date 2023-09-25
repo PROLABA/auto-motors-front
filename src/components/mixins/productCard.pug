@@ -1,6 +1,6 @@
 mixin productCard(secondType = false)
-  a.product(class= secondType ? 'product_second-type' : '')
-    .product__gallery.swiper 
+  .product( class= secondType ? 'product_second-type' : '')
+    a.product__gallery.swiper( href="./detail.pug") 
         .product__gallery-pics.swiper-wrapper 
           figure.gallery__pic.image.swiper-slide 
             img(src="./images/card1.png", alt="")
@@ -14,7 +14,7 @@ mixin productCard(secondType = false)
         ul.product__tags 
           li.product__tag.bg--peach Хит
           li.product__tag.bg--purple Советуем
-      .product__name Обойма передняя дифференциала раздаточной коробки (ПАО)
+      a.product__name( href="./detail.pug") Обойма передняя дифференциала раздаточной коробки (ПАО)
       ul.product__chars 
         li.product__char
           span Артикул:

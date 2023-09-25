@@ -240,6 +240,7 @@ h4,
     background: #F5F7FA;
     padding: 16px 36px;
     width: 50%;
+    flex-grow: 1;
 }
 
 .page-head__banners {
@@ -581,6 +582,7 @@ h4,
 }
 
 .product__name {
+    display: block;
     margin-bottom: 7px;
 }
 
@@ -974,7 +976,7 @@ b {
     height: 80px;
 }
 
-.product__content {
+.product_second-type .product__content {
     gap: 30px;
     display: flex;
     align-items: flex-start;
