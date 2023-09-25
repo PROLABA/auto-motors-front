@@ -1,0 +1,33 @@
+mixin productCardBasket()
+  .product.product_in-basket
+    a.product__gallery.swiper( href="./detail.pug") 
+        .product__gallery-pics.swiper-wrapper 
+          figure.gallery__pic.image.swiper-slide 
+            img(src="./images/card1.png", alt="")
+          figure.gallery__pic.image.swiper-slide 
+            img(src="./images/card2.png", alt="")
+          figure.gallery__pic.image.swiper-slide 
+            img(src="./images/card3.png", alt="")
+        .product__gallery-pagination.swiper-pagination.flat-pag 
+    .product__content
+      a.product__name( href="./detail.pug") Обойма передняя дифференциала раздаточной коробки (ПАО)
+      ul.product__chars 
+        li.product__char
+          span Артикул:
+          span 5320-5001010
+        li.product__char
+          span Производитель:
+          span ПАО
+      a.product__in-fav.clr--blue-light В избранное
+    .product__prices
+      .product__price-wrp
+        span.product__price-note Цена 
+        span.product__price 5 200 руб.
+      .product__price-wrp
+        span.product__price-note Сумма 
+        span.product__price 50 200 руб.
+    .counter.product__count 
+      .counter-minus 
+      .counter-num 1
+      .counter-plus
+    .product__remove.clr--red Удалить

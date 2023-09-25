@@ -1,0 +1,33 @@
+include ./productCardBasket.pug
+
+
+mixin basket()
+  section.basket 
+    .container 
+      .basket-wrp
+        .basket__content
+          header.basket__head 
+            h1.basket__title Корзина
+            button.btn.btn--white Очистить корзину
+            input.basic_input.basic_input-blue.basket__search( name='search' type="search" placeholder='Поиск')
+          .basket__items 
+            - for (let i=0;i<4;i++)
+              +productCardBasket()
+        aside.basket__side-menu 
+          .basket__action 
+            .basket__final-price 
+              span.final-price__note Итого:
+              span 3 200 руб.
+            .basket__action-note 
+              p Наши менеджеры свяжутся с вами, ответят на любые вопросы и подготовят счет на оплату
+            button.basket__action-btn.btn Оформить заявку
+          .basket__count-info  
+            .count-info__item
+              span ТОбщее кол-во товара
+              span.bg--green 2100 
+            .count-info__item
+              span Сумма НДС
+              span 2
+            .count-info__item
+              span Общий вес (кг)
+              span 223
