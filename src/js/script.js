@@ -75,3 +75,6 @@ thumbs: {
   swiper: detailGalleryThumb,
 },
 });
+$('.nav--item-head').on('click',function(){
+  $(this).closest('.nav').toggleClass('nav_opened')
+})
