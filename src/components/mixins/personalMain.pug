@@ -1,0 +1,36 @@
+mixin personalMain()
+  section.personal
+    .container 
+      .personal__container 
+        aside.personal__sidebar
+          a.personal__sidebar-link.sidebar-link_active Рабочий стол 
+          a.personal__sidebar-link Мои заказы <span>100+</span> 
+          a.personal__sidebar-link История поиска 
+          a.personal__sidebar-link Возврат брака
+          a.personal__sidebar-link Спец. раздел <span>3</span> 
+          a.personal__sidebar-link Избранное <span>28</span> 
+          a.personal__sidebar-link Информационные письма
+          a.personal__sidebar-link.clr--red Выйти
+        .personal-main 
+          .personal-main__form 
+            .personal-main__form-grid
+              label.form__label
+                span Ваше Имя
+                input.form__input.input_form(type="text" name='name' placeholder='')
+              label.form__label
+                span Пароль
+                input.form__input.input_form(type="text" name='pass' placeholder='')
+              label.form__label
+                span Ваша Фамилия
+                input.form__input.input_form(type="text" name='secondname' placeholder='')
+              label.form__label
+                span Повторите новый пароль
+                input.form__input.input_form(type="text" name='passrepeat' placeholder='')
+                span.form__note Пароль должен быть не менее 10 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9), содержать знаки пунктуации (,.<>/?;:'"[]{}\|`~!@#$%^&*()_+=-).
+              label.form__label
+                span Логин / email
+                input.form__input.input_form(type="text" name='login' placeholder='')
+              label.form__label
+                span Название компании
+                input.form__input.input_form(type="text" name='company' placeholder='')
+            button.personal-main__form-button.btn.btn--darkest Сохранить

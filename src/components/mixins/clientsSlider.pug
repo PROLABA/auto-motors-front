@@ -19,9 +19,11 @@ mixin clientsSlider()
                 a.client__link(href="#") 
                   figure.image 
                     img(src="./images/client2.png", alt="Технотрон")
-          .swiper-pagination.basic_slider__pagination 
-        .basic_slider__arrows.swiper-arrows.clients__arrows 
+          .swiper-pagination.basic_slider__pagination.desk_viewed 
+        .basic_slider__arrows.swiper-arrows.clients__arrows.desk_viewed 
           .swiper-button-prev 
             include ../../icons/arrow-slider.svg
           .swiper-button-next
             include ../../icons/arrow-slider.svg
+      .items__more.mobile_viewed 
+        button.btn.btn--blue-light Показать еще

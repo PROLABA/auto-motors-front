@@ -36,9 +36,11 @@ mixin newItemsSlider(secondType = false, title = "Распродажа")
                       .card__desc 
                         p Компрессор  фывфыыыв ф12 одноцилиндровый (Паневежио-Аурида)
                       .card__in-stock В наличии
-            .swiper-pagination.items__pagination 
-          .basic_slider__arrows.swiper-arrows.items__arrows 
+            .swiper-pagination.items__pagination.desk_viewed 
+          .basic_slider__arrows.swiper-arrows.items__arrows.desk_viewed
             .swiper-button-prev 
               include ../../icons/arrow-slider.svg
             .swiper-button-next
               include ../../icons/arrow-slider.svg
+        .items__more.mobile_viewed 
+          button.btn.btn--blue-light Показать еще

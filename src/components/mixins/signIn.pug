@@ -1,0 +1,22 @@
+mixin signIn()
+  section.sign
+    .container
+      .sign-wrp 
+        a.sign__logo(href='/')
+          figure.logo.image  
+            img(src="./images/logo.png", alt="Автомоторс")
+        .sign__form-wrp 
+          h2.sign__title Авторизация
+          form.sign__form
+            label.form__label
+              span Логин
+              input.form__input.input_form(type="text" name='login' placeholder='Введите Ваш логин или email')
+            label.form__label
+              span Пароль
+              input.form__input.input_form(type="text" name='pass' placeholder='Введите Ваш пароль')
+              a.form__note Забыли пароль?
+            .form__buttons 
+              a.form__button-link(href='#')
+                button.form__button.btn Авторизоваться
+              a.form__button-link(href="/")
+                button.form__button.btn.btn--grey.clr--blue-dark Вернуться на сайт

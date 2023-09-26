@@ -14,8 +14,11 @@ mixin productCard(secondType = false)
         ul.product__tags 
           li.product__tag.bg--peach Хит
           li.product__tag.bg--purple Советуем
+      .product__in-stock.mobile_viewed В наличии
+      h3.card__title.mobile_viewed Паневежио Аурида
+      span.card__articul.mobile_viewed WR545653-39
       a.product__name( href="./detail.pug") Обойма передняя дифференциала раздаточной коробки (ПАО)
-      ul.product__chars 
+      ul.product__chars.desk_viewed 
         li.product__char
           span Артикул:
           span 5320-5001010
@@ -32,9 +35,9 @@ mixin productCard(secondType = false)
     .product__actions
       .product__price-wrp 
         span.product__price 5 200 руб.
-        .product__in-stock В наличии
-      button.btn В корзину
+        .product__in-stock.desk_viewed В наличии
+      button.btn.desk_viewed В корзину
     - if(!secondType) 
-      .product__fav 
+      .product__fav.desk_viewed 
         figure.icon 
           img(src="./images/star.png", alt="")

@@ -4,7 +4,7 @@ mixin catalog()
   section.catalog 
     .container 
       .catalog__content 
-        aside.catalog__sidebar 
+        aside.catalog__sidebar.desk_viewed 
           h4.sidebar__title Категории
           ul.sidebar__categories
             - for(let i=0;i<3;i++)
@@ -54,12 +54,16 @@ mixin catalog()
                     input(type="checkbox" name='letter')
                     span Б
         .catalog-items
-          header.catalog__head 
+          header.catalog__head
+            .catalog__filter.mobile_viewed 
+              figure.icon 
+                img(src="./icons/filter.png", alt="")
+              span Фильтр 
             .catalog__sort 
               .catalog__sort-text Сначала дешевые
               figure.catalog__sort-arrow.icon 
                 include ../../icons/arrow.svg
-            .catalog__pages 
+            .catalog__pages.desk_viewed 
               .pages__turn
                 figure.pages__prev-icon.icon 
                   include ../../icons/arrow-more.svg
@@ -91,7 +95,7 @@ mixin catalog()
               +productCard()
           footer.catalog__foot 
             .catalog__pages 
-              .pages__turn
+              .pages__turn.desk_viewed 
                 figure.pages__prev-icon.icon 
                   include ../../icons/arrow-more.svg
                 .pages__text Назад
@@ -102,7 +106,7 @@ mixin catalog()
                 .pages__num ...
                 .pages__num 17
                 .pages__num 18
-              .pages__turn
+              .pages__turn.desk_viewed 
                 .pages__text Вперед
                 figure.pages__next-icon.icon 
                   include ../../icons/arrow-more.svg
