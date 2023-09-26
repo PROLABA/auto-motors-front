@@ -1,0 +1,9 @@
+include ../main/header.pug
+include ../main/footer.pug
+include ../mixins/personalOrders.pug
+include ../mixins/pageHead.pug
+
++header()
++pageHead(true, 'Личный кабинет', false)
++personalOrders()
++footer()

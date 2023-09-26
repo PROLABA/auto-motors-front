@@ -1,4 +1,5 @@
 include ./productCard.pug
+include ./navigationPage.pug
 
 mixin catalog()
   section.catalog 
@@ -63,22 +64,8 @@ mixin catalog()
               .catalog__sort-text Сначала дешевые
               figure.catalog__sort-arrow.icon 
                 include ../../icons/arrow.svg
-            .catalog__pages.desk_viewed 
-              .pages__turn
-                figure.pages__prev-icon.icon 
-                  include ../../icons/arrow-more.svg
-                .pages__text Назад
-              .pages__nums
-                .pages__num 1
-                .pages__num 2
-                .pages__num 3
-                .pages__num ...
-                .pages__num 17
-                .pages__num 18
-              .pages__turn
-                .pages__text Вперед
-                figure.pages__next-icon.icon 
-                  include ../../icons/arrow-more.svg
+            .catalog__pages.desk_viewed
+              +navigationPage()
           .catalog__items
             - for(let i=0;i<4;i++)
               +productCard()
@@ -94,19 +81,4 @@ mixin catalog()
             - for(let i=0;i<4;i++)
               +productCard()
           footer.catalog__foot 
-            .catalog__pages 
-              .pages__turn.desk_viewed 
-                figure.pages__prev-icon.icon 
-                  include ../../icons/arrow-more.svg
-                .pages__text Назад
-              .pages__nums
-                .pages__num 1
-                .pages__num 2
-                .pages__num 3
-                .pages__num ...
-                .pages__num 17
-                .pages__num 18
-              .pages__turn.desk_viewed 
-                .pages__text Вперед
-                figure.pages__next-icon.icon 
-                  include ../../icons/arrow-more.svg
+            +navigationPage()

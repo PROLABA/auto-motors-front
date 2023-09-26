@@ -231,6 +231,10 @@ h4,
     color: #E83A31;
 }
 
+.clr--blue-dark {
+    color: $blueDark
+}
+
 .clr--blue-light {
     color: $blueLight
 }
@@ -514,7 +518,7 @@ h4,
     transform: translateY(-50%);
 }
 
-.catalog__pages {
+.page__navigation {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1532,6 +1536,91 @@ b {
 .personal-main {
     max-width: 1000px;
 }
+
+.personal-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.personal-orders__head {
+    color: #949494;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    gap: 22px;
+}
+
+.selector_selected {
+    color: #3251A3;
+}
+
+.personal-orders__orders-table {
+    width: 100%;
+}
+
+
+
+.table__row:first-child td {
+    padding: 7px 0;
+}
+
+.table__row td:first-child {
+    padding-left: 22px;
+}
+
+.table__row td:last-child {
+    padding-right: 18px;
+    text-align: end;
+}
+
+.table__row td {
+    padding: 21px 0;
+}
+
+.table__row:nth-child(2n-1) {
+    background: #F9F9F9;
+}
+
+.table__row:first-child {
+    background: #F5F7FA;
+    color: #979797;
+}
+
+.table__row:not(:first-child) .table__num {
+    font-weight: 700;
+}
+
+.table__date {
+    width: 12%;
+}
+
+.personal-orders__selector {
+    cursor: pointer;
+}
+
+.personal-orders__pagination {
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width:$s1550) {

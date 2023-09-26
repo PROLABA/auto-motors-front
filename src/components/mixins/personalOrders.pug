@@ -1,0 +1,29 @@
+include ./personalSidebar.pug
+include ./navigationPage.pug
+
+mixin personalOrders()
+  section.personal
+    .container 
+      .personal__container 
+        +personalSidebar()
+        .personal-orders
+          header.personal-orders__head
+            .personal-orders__selector.selector_selected Текущие заказы
+            .personal-orders__selector История заказов
+            .personal-orders__selector Отмененные заказы
+          table.personal-orders__orders-table
+            tr.table__row 
+              td.table__num №
+              td.table__date Дата
+              td.table__count Кол-во позиций
+              td.table__sum Cумма
+              td.table__more
+            - for (let i=0;i<8;i++)
+              tr.table__row 
+                td.table__num 7560
+                td.table__date 04.08.2023
+                td.table__count 12 шт.
+                td.table__sum 53 000 руб.
+                td.table__more.clr--blue-dark Подробнее о заказе
+          .personal-orders__pagination
+            +navigationPage()
