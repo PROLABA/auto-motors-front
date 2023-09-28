@@ -1,5 +1,7 @@
 include ./productCard.pug
 include ./navigationPage.pug
+include ./detailPopup.pug
+include ./analogPopup.pug
 
 mixin catalog()
   section.catalog 
@@ -82,3 +84,5 @@ mixin catalog()
               +productCard()
           footer.catalog__foot 
             +navigationPage()
+  +detailPopup()
+  +analogPopup()

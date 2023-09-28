@@ -1,7 +1,7 @@
-mixin personalSidebar()
+mixin personalSidebar(selectedLink = 1)
   aside.personal__sidebar
-    a.personal__sidebar-link.sidebar-link_active Рабочий стол 
-    a.personal__sidebar-link(href='./personal-orders.pug') Мои заказы <span>100+</span> 
+    a.personal__sidebar-link(class=(selectedLink == 1) ? 'sidebar-link_active' : '') Рабочий стол 
+    a.personal__sidebar-link(href='./personal-orders.pug' class=(selectedLink == 2) ? 'sidebar-link_active' : '') Мои заказы <span>100+</span> 
     a.personal__sidebar-link История поиска 
     a.personal__sidebar-link Возврат брака
     a.personal__sidebar-link Спец. раздел <span>3</span> 

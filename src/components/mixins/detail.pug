@@ -2,7 +2,7 @@ include ./productCard.pug
 include ../mixins/newItemsSlider.pug
 
 
-mixin detail()
+mixin detail(withRec = true)
   section.detail-sec 
     .container 
       .detail-card
@@ -62,7 +62,8 @@ mixin detail()
             .count-info__item
               span Аналоги от <b>2100 руб.</b>
               span 2
-      +newItemsSlider(true, 'Наши новинки')
+      - if (withRec)
+        +newItemsSlider(true, 'Наши новинки')
       .detail__analogs 
         h2.analog__title Аналоги
         .analog__list 

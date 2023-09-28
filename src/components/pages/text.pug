@@ -1,0 +1,14 @@
+include ../main/header.pug
+include ../main/footer.pug
+include ../mixins/text.pug
+include ../mixins/pageHead.pug
+include ../mixins/infoBlock.pug
+include ../mixins/newItemsSlider.pug
+include ../mixins/clientsSlider.pug
++header()
++pageHead(true, 'Текстовая страница', false)
++text()
++newItemsSlider()
++clientsSlider()
++infoBlock()
++footer()

@@ -1,4 +1,4 @@
-mixin productCard(secondType = false)
+mixin productCard(secondType = false,withCount = false)
   .product( class= secondType ? 'product_second-type' : '')
     a.product__gallery.swiper( href="./detail.pug") 
         .product__gallery-pics.swiper-wrapper 
@@ -36,8 +36,11 @@ mixin productCard(secondType = false)
       .product__price-wrp 
         span.product__price 5 200 руб.
         .product__in-stock.desk_viewed В наличии
-      button.btn.desk_viewed В корзину
+      - if(!withCount)
+        button.btn.desk_viewed(data-popup='detail-popup') В корзину
+    - if (withCount)
+      .product__count 4 шт.
     - if(!secondType) 
-      .product__fav.desk_viewed 
+      .product__fav.desk_viewed(data-popup="analogs-popup")  
         figure.icon 
           img(src="./images/star.png", alt="")

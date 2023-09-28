@@ -1,0 +1,17 @@
+include ./productCard.pug
+
+mixin orderPopup()
+  section.order-popup.popup.fancybox#order-popup(style='display:none') 
+    .container 
+      .order-popup__content 
+        h1.popup__title Заказ №5423 от 02.09.23 на сумму 23 122 руб.
+        .popup__sub-title 12 позиций
+        .order__items-wrp 
+          .order__items-list 
+            - for (let i=0;i<6;i++) 
+              +productCard(true,true)
+          .order__items-btns 
+            .order__items-btn 
+              button.btn.btn--darkest Повторить заказ
+            .order__items-btn 
+              button.btn.btn--grey.clr--blue-dark Повторить заказ

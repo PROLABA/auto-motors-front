@@ -1,0 +1,7 @@
+include ./detail.pug
+
+mixin detailPopup()
+  section.detail-popup.popup.fancybox#detail-popup(style='display:none') 
+    .container 
+      .detail-popup__content 
+        +detail(false)

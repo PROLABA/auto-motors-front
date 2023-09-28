@@ -1,0 +1,32 @@
+mixin headerCategory()
+  section.categories 
+    .container 
+      .categories__content 
+        .categories__select 
+          .categories__select-item.category_selected Запчасти для а/м КАМАЗ
+          .categories__select-item Запчасти 5490
+          .categories__select-item Запчасти для а/м МАЗ
+        .categories__cat-wrp
+          - for (let i=0;i<3; i++)
+            .categories__cat
+              h1.categories__cat-title Запчасти для а/м КАМАЗ
+              .categories__cat-count.clr--blue-dark 10 000 товаров
+              .categories__cat-list-wrp.scrollbar--blue
+                ul.categories__cat-list
+                  - for (let i=0;i<8; i++)
+                    li.category
+                      h3.category__title Тормозная система
+                      ul 
+                        li Двигатель
+                        li Запчасти для а/м КАМАЗ
+                        li Тормозная система
+                        li Двигатель
+                    li.category
+                      h3.category__title Тормозная система
+                      ul 
+                        li Двигатель
+                        li Запчасти для а/м КАМАЗ
+                        li Тормозная система
+                        li Двигатель
+                        li Запчаст  и для а/м КАМАЗ
+                        li Тормозная система

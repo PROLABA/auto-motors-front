@@ -1,4 +1,7 @@
+include ../mixins/categoriesPopup.pug
+
 mixin footer(className)
+  +categoriesPopup()
   footer(class=`${className ? className : ''} footer`)
     .footer-main 
       .container 

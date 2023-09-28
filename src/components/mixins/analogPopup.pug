@@ -1,0 +1,19 @@
+include ./detail.pug
+
+mixin analogPopup()
+  section.analog-popup.popup.fancybox#analogs-popup(style='display:none') 
+    .container 
+      .analog-popup__content 
+        h1.popup__title Подушка водительского сидения для а/м КАМАЗ ЕВРО 53205-6803010-01 РИАТ
+        .popup__sub-title 5320-5001010 / ПАО
+        .analog-popup__analogs-wrp 
+          .analogs
+            h2.analogs__title Аналоги
+            .analogs__list 
+              -for (let i=0;i<4;i++)
+                +productCard(true)
+          .apply
+            h2.apply__title Применяемость
+            ul.apply__list 
+              li.apply__item КАМАЗ 5320 -  Система отопления - Радиатора отопителя
+              li.apply__item КАМАЗ 5410 -  Система отопления - Радиатор отпителя

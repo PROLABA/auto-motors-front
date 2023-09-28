@@ -1,0 +1,18 @@
+mixin clientsBig()
+  section.clients.clients_big 
+    .container 
+      .clients-wrp 
+        header.clients__head 
+          h2.clients__title.sec_title Мы дилеры более 300 заводов
+          a.clients__more.link_more(href="") 
+            | Показать все
+            figure.icon 
+              include ../../icons/arrow-more.svg
+        ul.clients__list 
+          - for(let i=0;i<24;i++)
+            li.client 
+              a.client__link(href="#") 
+                figure.image 
+                  img(src="./images/client1.png", alt="Технотрон")
+        .items__more.mobile_viewed 
+          button.btn.btn--blue-light Показать еще

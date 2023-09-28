@@ -1,11 +1,12 @@
 include ./personalSidebar.pug
 include ./navigationPage.pug
+include ./orderPopup.pug
 
 mixin personalOrders()
   section.personal
     .container 
       .personal__container 
-        +personalSidebar()
+        +personalSidebar(2)
         .personal-orders
           header.personal-orders__head
             .personal-orders__selector.selector_selected Текущие заказы
@@ -24,6 +25,7 @@ mixin personalOrders()
                 td.table__date 04.08.2023
                 td.table__count 12 шт.
                 td.table__sum 53 000 руб.
-                td.table__more.clr--blue-dark Подробнее о заказе
+                td.table__more.clr--blue-dark(data-popup="order-popup") Подробнее о заказе
           .personal-orders__pagination
             +navigationPage()
+  +orderPopup()
