@@ -1,5 +1,5 @@
 mixin newItems(title = "Новинки")
-  section.items
+  section.items.items_first-type
     .container 
       .items-wrp 
         header.items__head
@@ -43,7 +43,7 @@ mixin newItems(title = "Новинки")
                       img(src="./images/card2.png", alt="")
                     figure.gallery__pic.image.swiper-slide 
                       img(src="./images/card3.png", alt="")
-                  .card__gallery-pagination.swiper-pagination 
+                  .card__gallery-pagination.swiper-pagination.flat-pag
                 .card__tags   
                   .card__tag.bg--peach Хит
                   .card__tag.bg--purple Советуем

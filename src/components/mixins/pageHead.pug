@@ -1,8 +1,8 @@
-mixin pageHead(withBanners = false, title = 'Личный кабинет', isProduct = false)
-  header.page-head(class=isProduct ? 'page-head_product' : 'page-head_default') 
+mixin pageHead(withBanners = false, title = 'Личный кабинет', isProduct = false, inMobile = true)
+  header.page-head(class=inMobile ? '' : 'desk_viewed') 
     .container 
       .page-head-wrp 
-        .page-head__content 
+        .page-head__content(class=isProduct ? 'page-head_product' : 'page-head_default') 
           .page-head__breadcrumbs.scroll_mobile-unvisible 
             nav.breadcrumbs 
               a.breadcrumbs__item(href="#") Главная

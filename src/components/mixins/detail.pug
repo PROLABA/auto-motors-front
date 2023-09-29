@@ -23,7 +23,10 @@ mixin detail(withRec = true)
               .detail__pic.swiper-slide 
                 figure.image 
                   img(src="./images/card2.png", alt="")
+            .detail__pic-pagination.swiper-pagination.mobile_viewed
         .detail__chars
+          h2.detail__name.mobile_viewed Подушка водительского сидения для а/м КАМАЗ ЕВРО 53205-6803010-01 РИАТ
+          .detail__article.mobile_viewed 5320-5001010 / ПАО
           ul.detail__chars-tags 
             li.detail__chars-tag.bg--peach Хит 
             li.detail__chars-tag.bg--purple Советуем 
@@ -47,12 +50,16 @@ mixin detail(withRec = true)
                 span КАМАЗ 5320,  5410 | МАЗ 5410
           a.detail__chars-show(href="#desc") Показать описание
         .detail__actions
-          .detail__to-basket 
-            span.detail__price 3 200 руб. / шт.
-            .counter.detail__count 
-              .counter-minus 
-              .counter-num 1
-              .counter-plus
+          .detail__to-basket
+            .detail__to-basket-wrp 
+              span.detail__price 3 200 руб. / шт.
+              .mobile_viewed.count-info__item
+                span Товара в наличии 
+                span.bg--green 2100 
+              .counter.detail__count.desk_viewed 
+                .counter-minus 
+                .counter-num 1
+                .counter-plus
             a.detail__to-basket-button
               button.btn В корзину
           .detail__count-info   
