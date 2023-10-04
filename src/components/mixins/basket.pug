@@ -13,7 +13,8 @@ mixin basket()
           .basket__items 
             - for (let i=0;i<4;i++)
               +productCardBasket()
-        aside.basket__side-menu 
+        aside.basket__side-menu
+          #basket-price_observer 
           .basket__action 
             .basket__final-price 
               span.final-price__note Итого:

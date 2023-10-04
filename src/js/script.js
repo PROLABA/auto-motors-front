@@ -24,6 +24,20 @@ function getScrollBarWidth () {
   return (w1 - w2);
 };
 
+
+if (document.querySelector("#basket-price_observer")) {
+  var observer = new IntersectionObserver(function(entries) {
+    // no intersection with screen
+    let el = document.querySelector("#basket-price_observer");
+    let elDistanceToTop = window.scrollY + el.getBoundingClientRect().top;
+    if(entries[0].intersectionRatio === 0 && window.scrollY < elDistanceToTop)
+      document.querySelector(".basket__action").classList.add("container-sticky");
+    // fully intersects with screen
+    else if(entries[0].intersectionRatio === 1)
+      document.querySelector(".basket__action").classList.remove("container-sticky");
+  }, { threshold: [0,1] });
+  observer.observe(document.querySelector("#basket-price_observer"));
+}
 let bannerSlider = new Swiper('.banners-slider', {
   spaceBetween:32,
   pagination: {
@@ -173,3 +187,15 @@ $('[data-popup]').click(function(){
     touch: false
 	});
 });
+
+$('.header-menu__item-title').on('click',function(){
+  $(this).closest('.header-menu__item').addClass('active')
+})
+$('.header-menu__item-back').on('click',function(){
+  $(this).closest('.header-menu__item').removeClass('active')
+})
+$('.header__burger').on('click',function(){
+  $("body").toggleClass('menu_opened');
+  $('header').toggleClass('menu_opened');
+  $('.header-menu').toggleClass('menu_opened');
+})

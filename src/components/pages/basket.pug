@@ -1,10 +1,13 @@
 include ../main/header.pug
 include ../main/footer.pug
 include ../mixins/infoBlock.pug
+include ../mixins/pageHead.pug
 include ../mixins/newItems.pug
 include ../mixins/basket.pug
 
 +header()
+.mobile_viewed 
+  +pageHead(false, 'Корзина', true)
 +basket()
 +newItems('Вы смотрели недавно')
 +infoBlock()

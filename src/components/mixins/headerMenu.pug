@@ -1,0 +1,97 @@
+include ./personalSidebar.pug
+
+mixin headerMenu()
+  section.header-menu.menu 
+    .container 
+      .header-menu-wrp
+        - for (let i=0;i<3;i++) 
+          .header-menu__item 
+            .header-menu__item-title 
+              span Запчасти для ам КамАз
+              figure.icon 
+                include ../../icons/chevron.svg
+            .header-menu__item-list 
+              .header-menu__item-back
+                figure.icon 
+                  include ../../icons/arrow-right-long.svg 
+                span Назад
+              .header-menu__item 
+                .header-menu__item-title 
+                  span Запчасти для ам КамАз
+                  figure.icon 
+                    include ../../icons/chevron.svg
+                .header-menu__item-list 
+                  .header-menu__item-back
+                    figure.icon 
+                      include ../../icons/arrow-right-long.svg 
+                    span Назад
+                  .header-menu__item 
+                    .header-menu__item-title 
+                      span Запчасти для ам КамАз
+              .header-menu__item 
+                .header-menu__item-title 
+                  span Запчасти для ам КамАз
+                  figure.icon 
+                    include ../../icons/chevron.svg
+                .header-menu__item-list 
+                  .header-menu__item-back
+                    figure.icon 
+                      include ../../icons/arrow-right-long.svg 
+                    span Назад
+                  .header-menu__item 
+                    .header-menu__item-title 
+                      span Запчасти для ам КамАз
+        .header-menu__personal 
+          .header-menu__login
+            span Вы не авторизованы
+            a 
+              | Войти в личный кабинет
+              figure.icon 
+                include ../../icons/arrow-right-long.svg
+          .header-menu__acc 
+            .header-menu__acc-name Иванов Иван
+            +personalSidebar()
+        - for (let i=0;i<3;i++) 
+          .header-menu__item 
+            .header-menu__item-title 
+              span О компании
+              figure.icon 
+                include ../../icons/chevron.svg
+            .header-menu__item-list 
+              .header-menu__item-back
+                figure.icon 
+                  include ../../icons/arrow-right-long.svg 
+                span Назад
+              .header-menu__item 
+                .header-menu__item-title 
+                  span Запчасти для ам КамАз
+                  figure.icon 
+                    include ../../icons/chevron.svg
+                .header-menu__item-list 
+                  .header-menu__item-back
+                    figure.icon 
+                      include ../../icons/arrow-right-long.svg 
+                    span Назад
+                  .header-menu__item 
+                    .header-menu__item-title 
+                      span Запчасти для ам КамАз
+              .header-menu__item 
+                .header-menu__item-title 
+                  span Запчасти для ам КамАз
+                  figure.icon 
+                    include ../../icons/chevron.svg
+                .header-menu__item-list 
+                  .header-menu__item-back
+                    figure.icon 
+                      include ../../icons/arrow-right-long.svg 
+                    span Назад
+                  .header-menu__item 
+                    .header-menu__item-title 
+                      span Запчасти для ам КамАз
+        footer.header-menu__foot 
+          .header-menu__foot-item 
+            span Отдел закупок
+            a(href="tel:+71000000000") +7 100 000-00-00
+          .header-menu__foot-item 
+            span Отдел продаж
+            a(href="tel:+71000000000") +7 100 000-00-00

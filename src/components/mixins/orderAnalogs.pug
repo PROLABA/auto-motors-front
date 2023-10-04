@@ -1,0 +1,13 @@
+include ./productCard.pug
+
+
+mixin orderAnalogs()
+  .order__items-wrp 
+    .order__items-list 
+      - for (let i=0;i<6;i++) 
+        +productCard(true,true)
+    .order__items-btns 
+      .order__items-btn 
+        button.btn.btn--darkest Повторить заказ
+      .order__items-btn 
+        button.btn.btn--grey.clr--blue-dark Повторить заказ

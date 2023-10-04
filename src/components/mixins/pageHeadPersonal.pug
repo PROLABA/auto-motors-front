@@ -1,0 +1,28 @@
+mixin pageHeadPersonal(withBanners = true, title = 'Персональные данные')
+  header.page-head(class='page-head__personal') 
+    .container 
+      .page-head-wrp 
+        .page-head__content
+          .page-head__breadcrumbs.scroll_mobile-unvisible 
+            nav.breadcrumbs 
+              a.breadcrumbs__item(href="#") Главная
+              a.breadcrumbs__item(href="#") Каталог
+              a.breadcrumbs__item(href="#") Запчасти на КАМАЗ
+              span.breadcrumbs__item(href="#") Система отопления
+          .page-head__text
+            h1.page-head__title.page_title= title
+            .page-head__subtitle.mobile_viewed Личный кабинет
+        - if (withBanners)
+          .page-head__banners.swiper.desk_viewed 
+            .page-head__banners-list.swiper-wrapper
+              - for (i=0;i<3; i++)
+                .page-head__banner.swiper-slide  
+                  .page-head__banner-content 
+                    h3.page-head__banner-title Наши диллерские сертификаты
+                    .page-head__banner-desc 
+                      p АВТОМОТОРС является дилером и партнером более 200 заводов-смежников.
+                    a.page-head__banner-link(href="#")
+                      button.btn.btn--darkest Подробнее 
+                  figure.image.object-fit.page-head__banner-pic
+                    img(src="./images/banner.png", alt="") 
+            .page-head__banners-pagination.swiper-pagination

@@ -1,9 +1,9 @@
 include ../main/header.pug
 include ../main/footer.pug
 include ../mixins/personalOrders.pug
-include ../mixins/pageHead.pug
+include ../mixins/pageHeadPersonal.pug
 
 +header()
-+pageHead(true, 'Личный кабинет', false)
++pageHeadPersonal(true, 'Мои заказы')
 +personalOrders()
 +footer()

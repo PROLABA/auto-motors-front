@@ -1,4 +1,8 @@
+include ../mixins/headerMenu.pug
+
 mixin header(className)
+  .mobile_viewed
+    +headerMenu()
   header(class=`${className ? className : ''} header`)
     .container 
       header.header__head.desk_viewed
