@@ -44,21 +44,48 @@ let bannerSlider = new Swiper('.banners-slider', {
       el: '.banners-slider .swiper-pagination'
   }
 })
-let cardSliders = new Swiper('.card__gallery', {
-  loop:true,
-  spaceBetween:0,
-  pagination: {
-      el: '.swiper-pagination'
+$('.card__gallery').each(function(index) {
+  const CatalogItemSwiper = new Swiper(this, {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      draggable:false,
+      pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+      },
+  })
+  if ($(window).width() > 970) {
+      let squaresCount = $(this).find('.gallery__pic').length;
+      for (let i = 0;i < squaresCount;i++) {
+          $(this).find('.gallery-squares').append('<div class="gallery-square"></div>')
+      }
+      $(this).find('.gallery-square').on("mouseenter",function(){
+          CatalogItemSwiper.slideTo($(this).index(),0)
+      })
   }
 })
+$('.product__gallery').each(function(index) {
+  const CatalogItemSwiper = new Swiper(this, {
+      spaceBetween:0,
+      slidesPerView: 1,
+      draggable:false,
+      pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+      },
+  })
+  if ($(window).width() > 970) {
+      let squaresCount = $(this).find('.gallery__pic').length;
+      for (let i = 0;i < squaresCount;i++) {
+          $(this).find('.gallery-squares').append('<div class="gallery-square"></div>')
+      }
+      $(this).find('.gallery-square').on("mouseenter",function(){
+          CatalogItemSwiper.slideTo($(this).index(),0)
+      })
+  }
+})
+
 let pageHeadBanners = new Swiper('.page-head__banners', {
-  loop:true,
-  spaceBetween:0,
-  pagination: {
-      el: '.swiper-pagination'
-  }
-})
-let productGallery = new Swiper('.product__gallery', {
   loop:true,
   spaceBetween:0,
   pagination: {

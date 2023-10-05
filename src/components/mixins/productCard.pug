@@ -8,7 +8,8 @@ mixin productCard(secondType = false,withCount = false)
             img(src="./images/card2.png", alt="")
           figure.gallery__pic.image.swiper-slide 
             img(src="./images/card3.png", alt="")
-        .product__gallery-pagination.swiper-pagination.flat-pag 
+        .product__gallery-pagination.swiper-pagination.flat-pag
+        .gallery-squares 
     .product__content
       - if(!secondType) 
         ul.product__tags 
