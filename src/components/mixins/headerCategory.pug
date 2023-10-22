@@ -8,7 +8,7 @@ mixin headerCategory()
           .categories__select-item Запчасти для а/м МАЗ
         .categories__cat-wrp
           - for (let i=0;i<3; i++)
-            .categories__cat
+            .categories__cat(class=(i ==0) ? 'cat_open' : '')
               h1.categories__cat-title Запчасти для а/м КАМАЗ
               .categories__cat-count.clr--blue-dark 10 000 товаров
               .categories__cat-list-wrp.scrollbar--blue
@@ -17,16 +17,26 @@ mixin headerCategory()
                     li.category
                       h3.category__title Тормозная система
                       ul 
-                        li Двигатель
-                        li Запчасти для а/м КАМАЗ
-                        li Тормозная система
-                        li Двигатель
+                        li 
+                          a(href="./catalog.pug") Двигатель
+                        li 
+                          a(href="./catalog.pug") Запчасти для а/м КАМАЗ
+                        li 
+                          a(href="./catalog.pug") Тормозная система
+                        li 
+                          a(href="./catalog.pug") Двигатель
                     li.category
                       h3.category__title Тормозная система
                       ul 
-                        li Двигатель
-                        li Запчасти для а/м КАМАЗ
-                        li Тормозная система
-                        li Двигатель
-                        li Запчаст  и для а/м КАМАЗ
-                        li Тормозная система
+                        li 
+                          a(href="./catalog.pug") Двигатель
+                        li 
+                          a(href="./catalog.pug") Запчасти для а/м КАМАЗ
+                        li 
+                          a(href="./catalog.pug") Тормозная система
+                        li 
+                          a(href="./catalog.pug") Двигатель
+                        li 
+                          a(href="./catalog.pug") Запчаст  и для а/м КАМАЗ
+                        li 
+                          a(href="./catalog.pug") Тормозная система

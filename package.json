@@ -1,7 +1,7 @@
 {
   "browserslist": "> 0.25%",
   "scripts": {
-    "dev": "parcel ./src/*.pug --port 3000 --open",
+    "dev": "parcel ./src/*.pug --port 3001 --open",
     "build": "parcel build ./src/*.pug --public-url .",
     "local": "yarn && yarn dev",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|ts|tsx|css|scss)\"",

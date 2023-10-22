@@ -24,6 +24,13 @@ function getScrollBarWidth () {
   return (w1 - w2);
 };
 
+$('.categories__select-item').on('click',function(){
+  $('.category_selected').removeClass('category_selected');
+  $('.cat_open').removeClass('cat_open');
+  let index = $(this).index() + 1;
+  $('.categories__cat:nth-child(' + index + ')').addClass('cat_open');
+  $(this).addClass('category_selected')
+})
 
 if (document.querySelector("#basket-price_observer")) {
   var observer = new IntersectionObserver(function(entries) {
@@ -61,6 +68,9 @@ $('.card__gallery').each(function(index) {
       }
       $(this).find('.gallery-square').on("mouseenter",function(){
           CatalogItemSwiper.slideTo($(this).index(),0)
+      })
+      $(this).find('.gallery-squares').on('mouseleave',function(){
+        CatalogItemSwiper.slideTo(0,0)
       })
   }
 })

@@ -1666,6 +1666,7 @@ b {
 .categories__select-item {
     padding: 8px 16px 8px 8px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .categories__select {
@@ -1687,7 +1688,7 @@ b {
     display: none;
 }
 
-.categories__cat:first-child {
+.cat_open {
     display: block;
 }
 
@@ -1971,6 +1972,10 @@ b {
     display: flex;
 }
 
+.header-menu__acc {
+    display: none;
+}
+
 .gallery-square {
     flex-grow: 1;
 }
@@ -1981,7 +1986,7 @@ b {
     }
 }
 
-@me @media (max-width:$s1400) {
+@media (max-width:$s1400) {
     .card {
         width: calc((100% - 45px) / 4);
     }
